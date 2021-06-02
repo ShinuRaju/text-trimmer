@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <title>Text Trimmer</title>
+  </head>
+  <body>
+     <div class="container mb-5">
+         <h1 class="display-1 text-center mt-1 mb-3">Text Trimmer</h1>
+         <p class="w-75 mx-auto ">World's simplest browser-based utility for trimming text. Load your text in the input form on the left and you'll instantly get trimmed text on the right. Powerful, free, and fast. Load plain text – get trimmed text.</p>
+
+         <div class="row">
+             <div class="col-md-6 mb-4">
+                 <div class="form-group">
+                     <label for="inputText"><h5>Input Text : </h5></label>
+                     <textarea id="inputText" class="form-control" name="" rows="3"></textarea>
+                 </div>
+                 <button class="btn btn-dark my-2" data-clipboard-target="#inputText">
+                     Copy To Clipboard
+                 </button>
+             </div>
+
+             <div class="col-md-6 mb-4">
+                <div class="form-group">
+                    <label for="trimmedText"><h5>Trimmed Text : </h5></label>
+                    <textarea id="trimmedText" class="form-control" name="" rows="3"></textarea>
+                </div>
+                <button class="btn btn-dark my-2"  data-clipboard-target="#trimmedText">
+                    Copy To Clipboard
+                </button>
+            </div>
+
+
+         </div>
+
+         <div class="row">
+             <h5  class="">Trimming and Lines</h5>
+            <div class="col-md-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="ltrim">
+                    <label class="form-check-label" for="ltrim">
+                    Left-Side Trimming
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="rtrim"  >
+                    <label class="form-check-label" for="rtrim">
+                     Right-Side Trimming
+                    </label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="removeSpace"  >
+                     <label class="form-check-label" for="removeSpace">
+                     Remove excess spaces in-between
+                     </label>
+                   </div>
+                   <!-- <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="lineTrim"  >
+                     <label class="form-check-label" for="lineTrim">
+                     Line-by-Line Trimming
+                     </label>
+                   </div> -->
+            </div>
+         </div>
+
+        </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+
+    <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+    <script>
+        (function(){
+    new Clipboard('.btn');
+})();
+    </script>
+    <script src="app.js"></script> 
+</body>
+</html>
